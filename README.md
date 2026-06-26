@@ -1,0 +1,1 @@
+Upload index.html, style.css, assets folder, and images folder to GitHub. Then enable GitHub Pages: Settings → Pages → Deploy from branch → main → /root.

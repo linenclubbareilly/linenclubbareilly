@@ -1,0 +1,68 @@
+*{box-sizing:border-box}:root{--brand:#36636e;--dark:#132f35;--gold:#d8bd8a;--cream:#f8f4ed}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);font-family:Arial,Helvetica,sans-serif;color:#17282d;line-height:1.55}.brand-strip{height:68px;background:#050505;color:white;display:flex;align-items:center;justify-content:space-between;padding:0 3.6vw;font-weight:700}.brand-strip-left,.brand-strip-right{display:flex;align-items:center;gap:22px}.brand-strip-left img{height:46px;background:#050505}.brand-strip-left .explore-logo{height:38px;width:auto;object-fit:contain}.brand-strip-left .cavallo{height:38px}.brand-strip a{color:white;text-decoration:none}.divider{height:32px;width:1px;background:rgba(255,255,255,.55)}.header{height:82px;background:var(--brand);display:flex;align-items:center;justify-content:space-between;padding:0 3.6vw;position:sticky;top:0;z-index:20}.brand img{height:88px;width:auto;display:block;background:var(--brand)}nav{display:flex;align-items:center;gap:28px}nav a{color:white;text-decoration:none;font-weight:800;font-size:16px;white-space:nowrap}.header-actions{display:flex;align-items:center;gap:18px}.wa-mini img{width:34px;height:34px;display:block}.abf{height:56px;width:auto;border-radius:2px;background:white}.hero{min-height:calc(100vh - 150px);background:linear-gradient(90deg,rgba(0,0,0,.74),rgba(0,0,0,.18)),url('images/hero.jpg') center/cover no-repeat;display:flex;align-items:center;padding:0 7vw;color:white}.hero-copy{max-width:780px}.eyebrow{text-transform:uppercase;letter-spacing:2.4px;font-size:12px;font-weight:800;color:var(--gold);margin:0 0 14px}h1,h2,h3{font-family:Georgia,'Times New Roman',serif;font-weight:400}h1{font-size:clamp(52px,7vw,100px);line-height:.96;margin:0 0 18px;text-shadow:0 3px 20px rgba(0,0,0,.35)}.hero p:not(.eyebrow){font-size:22px;max-width:680px;margin:0}.actions{display:flex;gap:15px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border:1px solid white;color:white;text-decoration:none;font-weight:800;border-radius:3px}.btn img{width:22px;height:22px;display:block}.btn.primary{background:#0a7f8f;border-color:#0a7f8f;color:#ffffff}.btn.secondary{background:rgba(255,255,255,.08)}.btn.dark{color:#17282d;border-color:#17282d;background:white}.section{padding:78px 5vw;background:#fffdf8}.section.warm{background:#f0e8dc}.section-title{text-align:center;margin-bottom:36px}.section-title h2,.fabric-section h2,.visit h2{font-size:clamp(36px,4vw,58px);line-height:1.05;color:#174650;margin:0}.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}.women-grid{grid-template-columns:repeat(2,1fr);max-width:900px;margin:auto}article{background:white;border-radius:10px;overflow:hidden;box-shadow:0 14px 35px rgba(0,0,0,.12)}article img{width:100%;aspect-ratio:1.05/1;object-fit:cover;display:block}article h3{font-size:22px;margin:0;padding:17px 18px}.fabric-section{display:grid;grid-template-columns:.85fr 1.15fr;gap:54px;align-items:center;padding:82px 5vw;background:#132f35;color:white}.fabric-section h2{color:white}.fabric-section p{font-size:18px;color:rgba(255,255,255,.82)}.fabric-section img{width:100%;border-radius:10px;box-shadow:0 18px 45px rgba(0,0,0,.25)}.text-link{color:white;text-decoration:none;border-bottom:1px solid white;font-weight:800}.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.gallery img{width:100%;height:560px;object-fit:cover;border-radius:10px;box-shadow:0 18px 45px rgba(0,0,0,.14)}.visit{display:grid;grid-template-columns:.85fr 1.15fr;background:white}.visit-copy{padding:82px 5vw}.visit p{font-size:18px;color:#566}.visit a{color:#174650}iframe{width:100%;height:100%;min-height:500px;border:0}.floating-wa{position:fixed;right:24px;bottom:24px;width:62px;height:62px;z-index:30;border-radius:50%;box-shadow:0 14px 35px rgba(0,0,0,.25)}.floating-wa img{width:100%;height:100%;display:block}footer{background:var(--brand);display:flex;align-items:center;justify-content:center;gap:24px;padding:35px 5vw;color:rgba(255,255,255,.75);text-align:center;flex-wrap:wrap}footer img{height:78px;background:var(--brand)}.footer-abf{height:58px;background:white}@media(max-width:1200px){.brand-strip-right{display:none}nav{gap:16px}.product-grid{grid-template-columns:repeat(3,1fr)}}@media(max-width:900px){.brand-strip{display:none}.header{height:auto;min-height:110px;align-items:flex-start;flex-direction:column;gap:14px;padding:16px 5vw}.brand img{height:88px}nav{gap:14px;flex-wrap:wrap}nav a{font-size:13px}.header-actions{position:absolute;right:5vw;top:20px}.abf{display:none}.hero{min-height:72vh;padding:60px 5vw}.product-grid,.women-grid,.fabric-section,.gallery,.visit{grid-template-columns:1fr}.gallery img{height:auto}.section,.fabric-section,.visit-copy{padding:58px 5vw}iframe{min-height:360px}footer{flex-direction:column}}
+/* Updated category grids */
+.men-grid {
+  grid-template-columns: repeat(5, 1fr);
+}
+.women-grid {
+  grid-template-columns: repeat(5, 1fr);
+  max-width: none;
+}
+@media(max-width:1200px){
+  .men-grid, .women-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media(max-width:760px){
+  .men-grid, .women-grid { grid-template-columns: 1fr; }
+}
+
+
+
+/* Corrected logo sizing: keeps logo inside the teal header */
+.header {
+  min-height: 96px !important;
+  overflow: hidden !important;
+}
+
+.header .brand {
+  display: flex !important;
+  align-items: center !important;
+  height: 96px !important;
+}
+
+.header .brand img {
+  height: 64px !important;
+  max-height: 64px !important;
+  width: auto !important;
+  display: block !important;
+  object-fit: contain !important;
+  background: var(--brand) !important;
+}
+
+.brand-strip {
+  overflow: hidden !important;
+}
+
+.brand-strip-left img,
+.brand-strip-left .explore-logo {
+  height: 38px !important;
+  max-height: 38px !important;
+  width: auto !important;
+  object-fit: contain !important;
+}
+
+footer img {
+  height: 58px !important;
+  max-height: 58px !important;
+}
+
+@media(max-width:900px){
+  .header {
+    overflow: visible !important;
+  }
+  .header .brand {
+    height: auto !important;
+  }
+  .header .brand img {
+    height: 54px !important;
+    max-height: 54px !important;
+  }
+}
